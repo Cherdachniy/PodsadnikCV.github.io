@@ -1,0 +1,232 @@
+@import "../styles/variables";
+@import "../styles/common";
+
+//Layout
+.landing {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    border-left: 2px solid rgba(0, 0, 0, 0.25);
+
+    header {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+
+        .circle {
+            top: auto;
+            left: -31px;
+        }
+
+        .header-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            .title {
+                margin: 0;
+            }
+
+            .circle-links {
+                position: absolute;
+                top: 70px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-column-gap: 10px;
+                text-align: center;
+                z-index: 3;
+
+                .circle {
+                    position: relative;
+                    left: auto;
+                    margin: auto;
+                    animation: radiant-pulse 2s infinite ease-in-out;
+                }
+
+                a {
+                    color: black;
+
+                    .description {
+                        margin: $default-margin 0 0;
+                        opacity: 0;
+                        transition: 0.4s ease;
+                        transform: translateY(-10px);
+                    }
+
+                    &:hover {
+                        .description {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                }
+
+                &.sticky {
+                    position: fixed;
+                    top: 10px;
+
+                    .circle {
+                        transition: 0.25s ease-in-out;
+                        height: 30px;
+                        width: 30px;
+                    }
+
+                    .description {
+                        background-color: $white;
+                        border-radius: $default-border-radius;
+                        font-size: $font-size-small;
+                        padding: 0 $default-padding * 0.5;
+                        box-shadow: $navigation-box-shadow;
+                    }
+                }
+
+                @media screen and (max-device-width: 360px) {
+                    top: 91.5px;
+                }
+            }
+
+            @keyframes radiant-pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
+                }
+
+                100% {
+                    box-shadow: 0 0 0 7px rgba(0, 0, 0, 0);
+                }
+            }
+        }
+    }
+
+    .circle {
+        top: 68px;
+        left: 31px;
+    }
+
+    //About
+    .about {
+        .person-image {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: $default-border-radius;
+                pointer-events: none;
+            }
+        }
+
+        .info {
+            max-width: 420px;
+        }
+
+        .container-line {
+            @media screen and (max-device-width: 360px) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-device-width: 360px) {
+            grid-template-rows: min-content min-content 1fr;
+            grid-template-columns: none;
+            border-radius: 10px;
+            padding: $default-padding * 2.5 $default-padding * 2;
+            grid-row-gap: 10px;
+        }
+    }
+
+    //Experience
+    .wrapper {
+        border-radius: $container-border-radius;
+        box-shadow: $container-box-shadow;
+        padding: $default-padding * 4.5 $default-padding * 3;
+
+        .experience {
+            display: grid;
+            grid-template-columns: 1fr min-content 1fr;
+            grid-column-gap: 10px;
+
+            .date {
+                margin: $default-margin * 3 0;
+                text-align: right;
+
+                @media screen and (max-device-width: 360px) {
+                    margin: $default-margin 0;
+                }
+            }
+
+            .places {
+                margin: $default-margin * 2 0;
+            }
+
+            .container-line {
+                .circle {
+                    height: 30px;
+                    width: 30px;
+                    top: 23px;
+                    left: -14px;
+                }
+
+                @media screen and (max-device-width: 360px) {
+                    display: none;
+                }
+            }
+
+            @media screen and (max-device-width: 360px) {
+                grid-template-rows: repeat(3, min-content);
+                grid-template-columns: none;
+            }
+        }
+
+        @media screen and (max-device-width: 360px) {
+            padding:  $default-padding * 2.5 $default-padding * 2;
+        }
+    }
+
+    //Contacts
+    .contacts {
+        margin-bottom: $default-margin * 10;
+
+        .title {
+            text-align: right;
+            margin: 0;
+
+            @media screen and (max-device-width: 360px) {
+                text-align: center;
+                font-size: $font-size-subtitle;
+            }
+        }
+
+        .contacts-links {
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-device-width: 360px) {
+                justify-content: center;
+            }
+        }
+
+        .container-line {
+            @media screen and (max-device-width: 360px) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-device-width: 360px) {
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: none;
+            grid-row-gap: 10px;
+            padding: $default-padding * 2.5 $default-padding * 2;
+            margin-bottom: $default-margin * 7;
+        }
+    }
+
+    @media screen and (max-device-width: 360px) {
+        max-width: 320px;
+        border: none;
+    }
+}

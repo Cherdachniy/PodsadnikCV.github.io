@@ -1,0 +1,106 @@
+@import "../styles/variables";
+
+* {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-size: $font-size-regular;
+    line-height: 1.3;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $black;
+}
+
+p {
+    margin: 0 0 $default-margin * 2;
+
+    span {
+        color: $half-black;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.content-block {
+    position: relative;
+    padding-top: $default-padding * 10;
+
+    @media screen and (max-device-width: 360px) {
+        padding-top: $default-padding * 7;
+    }
+}
+
+.circle {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    border: $default-border-circle;
+    border-radius: 50%;
+    background: $white;
+    z-index: 3;
+
+    &.decoration {
+        @media screen and (max-device-width: 360px) {
+            display: none;
+        }
+    }
+}
+
+.container-line {
+    position: relative;
+    width: 2px;
+    background: $black;
+    margin: 0 $default-margin * 3;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr;
+    grid-column-gap: 10px;
+    border-radius: $container-border-radius;
+    box-shadow: $container-box-shadow;
+    padding: $default-padding * 4.5 $default-padding * 3;
+
+    @media screen and (max-device-width: 360px) {
+        border-radius: $default-border-radius;
+    }
+}
+
+.title {
+    font-size: $font-size-title;
+    font-weight: normal;
+    margin: 0 0 $default-margin * 2;
+}
+
+.subtitle {
+    font-size: $font-size-subtitle;
+    color: $half-black;
+    margin: 0 0 $default-margin;
+}
+
+.description {
+    margin: 0 0 $default-margin * 2;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-column-gap: 10px;
+    align-items: center;
+
+    & img {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+    }
+}

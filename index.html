@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Valentin Podsadnik</title>
-    <link rel="icon" href="/src/icons/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="dest/style.css">
+    <link rel="icon" href="src/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
 <body>
-<div class="wrapper">
     <div class="landing">
         <!--Header-->
-        <div class="header-overlay"></div>
         <header id="header">
-            <div class="line-circle"></div>
+            <div class="circle decoration"></div>
             <div class="header-container">
-                <div class="title">Hi, I'm Valentine and this is my CV</div>
-                <div class="circle-links">
-                    <a class="scroll-to" href="#about">
+                <h1 class="title">Hi, I'm Valentine and this is my CV</h1>
+                <div class="circle-links navigation">
+                    <a class="scroll-to" data-href="#about">
                         <div class="circle"></div>
                         <div class="description">About</div>
                     </a>
-                    <a class="scroll-to" href="#experience">
+                    <a class="scroll-to" data-href="#experience">
                         <div class="circle"></div>
                         <div class="description">Experience</div>
                     </a>
-                    <a class="scroll-to" href="#contacts">
+                    <a class="scroll-to" data-href="#contacts">
                         <div class="circle"></div>
                         <div class="description">Contacts</div>
                     </a>
@@ -34,55 +32,87 @@
         </header>
         <!--About-->
         <div class="content-block" id="about">
-            <div class="circle"></div>
+            <div class="circle decoration"></div>
             <div class="container about">
-                <div class="img">
+                <div class="person-image">
                     <img src="src/img/me.jpg" alt="photo">
                 </div>
-                <div class="line"></div>
+                <div class="container-line"></div>
                 <div class="info">
-                    <div class="title">Professional Skills</div>
+                    <h2 class="title">Valentine Podsadnik</h2>
                     <div class="description">
-                        Good knowledge of HTML5, CCS3, JS
-                        Experience in creating HTML-pages on the basis of Figma layouts
-                        Worked with CCS preprocessors, such as SASS
-                        Experience in GIT, JIRA.
+                        <p>
+                            <span>Position: </span>Front-end Developer<br>
+                            <span>Date of birth: </span>13.10.1996 (<label class="actual-age"></label>)<br>
+                            <span>Live in: </span><a href="https://goo.gl/maps/THt1dfLZV9dsYJK88" target="_blank" title="Google Maps">Polotsk</a> (ready to relocate)
+                        </p>
                     </div>
-                    <div class="title">Additional Skills</div>
+                    <h2 class="title">About me</h2>
+                    <p>Modeling a little, doing sports a little. Constantly in seek of new knowledge and perfection. But perfection is out of limit and there I'm try to find it all time. </p>
+                    <h2 class="title">Professional Skills</h2>
                     <div class="description">
-                        I'm interested in web develop, UX/UI design and everything connected with them.
-                        As for non-trivial experience, I'm served in the army.
-                        Ready to implement excellent project with wonderful people.
+                        Development of the front-end part of sites (HTML, CSS, JS), participation in the preparation of design documents (Figma). Testing of the developed product (functional, regression). Worked with SASS preprocessor. Experience in GIT, JIRA.
                     </div>
-                    <div class="title">Foreign Language</div>
-                    <div class="description">English(Intermediate)</div>
+                    <h2 class="title">Foreign Language</h2>
+                    <div class="description">
+                        <p>
+                            <span>English: </span>Intermediate<br>
+                            <span>Russian: </span>Native speaker<br>
+                            <span>Belarusian: </span>Native speaker
+                        </p>
+                    </div>
                     <div class="links">
-                        <img src="src/icons/pdf.svg" alt="PDF Image">
-                        <img src="src/icons/pdf.svg" alt="PDF Image">
+                        <a href="./src/Подсадник%20Валентин%20Александрович.pdf" download="" title="Download CV as .pdf file"><img src="src/icons/resume.svg" alt="CV Icon"></a>
+                        <a href="https://github.com/Cherdachniy" target="_blank" title="GitHub"><img src="src/icons/github.svg" alt="Github Icon"></a>
                     </div>
                 </div>
             </div>
         </div>
         <!--Experience-->
         <div class="content-block" id="experience">
-            <div class="circle"></div>
-            <div class="container experience">
-                <div class="description">July, 2020 - September, 2020</div>
-                <div class="line">
-                    <div class="circle"></div>
+            <div class="circle decoration"></div>
+            <div class="wrapper">
+                <div class="experience">
+                    <div class="description date">07.2020 - 05.2021</div>
+                    <div class="container-line">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="places">
+                        <div class="title"><a href="https://ilvocrm.com/" target="_blank" title="ilvocrm.com">IlvoCRM</a></div>
+                        <div class="subtitle">Front-end Developer</div>
+                        <p>Development of the landing page, price slider, navigation, modal windows, error pages, mobile menu, adapt to mobile devices and small displays.</p>
+                    </div>
                 </div>
-                <div class="where">
-                    <div class="title">Freelance</div>
-                    <p>Turnkey landing page creation</p>
+                <div class="experience">
+                    <div class="description date">01.2021 - 02.2021</div>
+                    <div class="container-line">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="places">
+                        <div class="title"><a href="https://dim-tim.com/" target="_blank" title="dim-tim.com">Dim-Tim</a></div>
+                        <div class="subtitle">Front-end Developer</div>
+                        <p>Refactoring stylesheet, update new data to main page, refactoring stylesheets, update new data to the main page, make new block with employees.</p>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="description date">11.2020 - 12.2021</div>
+                    <div class="container-line">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="places">
+                        <div class="title"><a href="https://innovationclub.ru/" target="_blank" title="innovationclub.ru">Innovation Club</a></div>
+                        <div class="subtitle">Front-end Developer</div>
+                        <p>Development of the landing page - navigation, modal windows, include external library, mobile menu and adapt to mobile devices and small displays.</p>
+                    </div>
                 </div>
             </div>
         </div>
         <!--Contacts-->
         <div class="content-block" id="contacts">
-            <div class="circle"></div>
+            <div class="circle decoration"></div>
             <div class="container contacts">
                 <div class="title">Discuss or just chat? I'll be here.</div>
-                <div class="line"></div>
+                <div class="container-line"></div>
                 <div class="contacts-links">
                     <div class="links">
                         <a href="https://t.me/Cherdachniy" target="_blank" title="Telegram"><img src="src/icons/telegram.svg" alt="Telegram Icon"></a>
@@ -93,7 +123,6 @@
             </div>
         </div>
     </div>
-</div>
-<script src="dest/bundle.js" async></script>
+    <script src="index.js"></script>
 </body>
 </html>
