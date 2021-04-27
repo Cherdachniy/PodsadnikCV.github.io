@@ -35,7 +35,7 @@ p {
     position: relative;
     padding-top: $default-padding * 10;
 
-    @media screen and (max-device-width: 360px) {
+    @media screen and (max-device-width: 541px) {
         padding-top: $default-padding * 7;
     }
 }
@@ -50,7 +50,7 @@ p {
     z-index: 3;
 
     &.decoration {
-        @media screen and (max-device-width: 360px) {
+        @media screen and (max-device-width: 541px) {
             display: none;
         }
     }
@@ -71,7 +71,7 @@ p {
     box-shadow: $container-box-shadow;
     padding: $default-padding * 4.5 $default-padding * 3;
 
-    @media screen and (max-device-width: 360px) {
+    @media screen and (max-device-width: 541px) {
         border-radius: $default-border-radius;
     }
 }
